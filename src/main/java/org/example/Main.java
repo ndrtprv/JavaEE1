@@ -2,9 +2,23 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        Employee emp1 = new Employee("Vlad Bezruk");
-        Employee emp2 = new Employee("Andrii Toporov", 2400);
-        emp1.printEmployee();
-        emp2.printEmployee();
+        try {
+            Employee emp1 = new Employee("Vlad Bezruk", 2500);
+            emp1.printEmployee();
+        } catch (FieldLengthLimitException | IncorrectSalaryException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            Employee emp2 = new Employee("Andrii Serhiyovych Toporov", 2400);
+            emp2.printEmployee();
+        } catch (FieldLengthLimitException | IncorrectSalaryException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            Employee emp3 = new Employee("Yevhen Solovey", -100);
+            emp3.printEmployee();
+        } catch (FieldLengthLimitException | IncorrectSalaryException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
