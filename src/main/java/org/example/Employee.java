@@ -1,10 +1,10 @@
 package org.example;
 
 public class Employee {
-    private int id;
+    private final int id;
     private static int nextId = 0;
-    private String name;
-    private double salary;
+    private final String name;
+    private final double salary;
     public Employee(String name, double salary) throws FieldLengthLimitException, IncorrectSalaryException {
         this.id = nextId++;
         if (name.length() > 20) {
