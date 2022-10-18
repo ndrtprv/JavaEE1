@@ -39,7 +39,7 @@ public class Main {
         }
 
         try { // Перевірка роботи IncorrectSalaryException для бонусу
-            Employee emp5 = new Manager("Ann Zaharova", "HR",10, -10);
+            Employee emp5 = new Manager("Ann Zakharova", "HR",10, -10);
             emp5.printEmployee();
             workers.addEmployee(emp5);
         } catch (FieldLengthLimitException | IncorrectSalaryException | EmployeeInRegistryException e) {

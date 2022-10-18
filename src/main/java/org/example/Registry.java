@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Registry {
     private static Registry instance = null;
-    private List<Employee> workers = new LinkedList<>();
+    private final List<Employee> workers = new LinkedList<>();
 
     private Registry() {
 

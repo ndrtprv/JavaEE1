@@ -1,7 +1,7 @@
 package org.example;
 
 public class Manager extends Employee{
-    private double bonus;
+    private final double bonus;
 
     public Manager(String name, String departmentName, double salary) throws FieldLengthLimitException, IncorrectSalaryException {
         super(name, departmentName, salary);
